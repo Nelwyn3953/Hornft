@@ -1,71 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nelvidsite.com</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsfeed with Audioplay</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #20203fe1;
+    }
+    
+            header {
+            background-color: black;
+            color: ;
             text-align: center;
             padding: 5px;
+            border-radius: 30px;
         }
 
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-        }
+    .news-container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #fff;
+    }
 
-        video {
-            width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
+    .news-item {
+      margin-bottom: 20px;
+    }
 
-        .download-btn {
-            display: block;
-            background-color: #4caf50;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-        .video-container {
-            overflow: hidden;
-        }
-
-        .video-list {
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        .video-list a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #333;
-            border-bottom: 1px solid #ddd;
-            transition: background-color 0.3s;
-        }
-
-        .video-list a:hover {
-            background-color: #f4f4f4;
-        }
-    </style>
+    .download-button, .play-button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-right: 10px;
+      background-color: black;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
@@ -73,22 +49,52 @@
         <img src="nelvidsite.png" alt="NELVIDSITE"" width="200" height="50">
     </header>
 
-    <main>
-        
 
-        <div class="video-list">
-            <h3>CUSTOMIZE HORN</h3>
-            <a href="horn 1.mp3">HORN 1</a>
-            <a href="horn 2.mp3">HORN 2</a>
-            <a href="horn 3.mp3">HORN 3</a>
 
-            <h3>DOWNLOAD</h3>
-            <a href="https://github.com/Nelwyn3953/Hornft/raw/main/horn%201.mp3">DOWNLOAD HORN 1</a>
-            <a href="https://github.com/Nelwyn3953/Hornft/raw/main/horn%202.mp3">DOWNLOAD HORN 2</a>
-            <a href="https://github.com/Nelwyn3953/Hornft/raw/main/horn%203.mp3">DOWNLOAD HORN 3</a>
-            <!-- Add more video links as needed -->
-        </div>
-    </main>
+<div class="news-container">
 
+  
+    <div class="news-item">
+    <h2>PRO MUSIC RAPID HORN</h2>
+    <h5>HORN 1 <code>(NHAY 3+ PRO MUSIC)</code></h5>
+    <audio id="audio1" src="horn 1.mp3"></audio>
+    <button class="play-button" onclick="toggleAudio('audio1')">Play</button>
+    <a href="https://www.mediafire.com/file/quaodrwopjja6hc/horn_1.mp3/" class="download-button">Download</a>
+  </div>
+  <br>
+  
+    
+    <div class="news-item">
+    <h2>PRO MUSIC RAPID HORN</h2>
+    <h5>HORN 2 <code>(NHAY 3+ PRO MUSIC)</code></h5>
+    <audio id="audio2" src="horn 2.mp3"></audio>
+    <button class="play-button" onclick="toggleAudio('audio2')">Play</button>
+    <a href="https://www.mediafire.com/file/yrwgq1q0eh9su8g/horn_2.mp3/file" class="download-button">Download</a>
+  </div>
+  <br>
+
+    <div class="news-item">
+    <h2>PRO MUSIC RAPID HORN</h2>
+    <h5>HORN 3 <code>(NHAY 3+ PRO MUSIC)</code></h5>
+    <audio id="audio3" src="horn 3.mp3"></audio>
+    <button class="play-button" onclick="toggleAudio('audio3')">Play</button>
+    <a href="https://www.mediafire.com/file/dwcys1pr5rwwvu7/horn_3.mp3/file" class="download-button">Download</a>
+  </div>
+  <br>
+  
+</div>
+
+
+
+<script>
+  function toggleAudio(audioId) {
+    var audio = document.getElementById(audioId);
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+</script>
 </body>
 </html>
